@@ -1,0 +1,22 @@
+TO DO:
+
+Extract Season Race Results data, store it locally and create a DataFrame - DONE
+Extract Season Qualifying Results data, store it locally and create a DataFrame - DONE
+Extract Season Sprint Results data, store it locally and create a DataFrame - DONE
+Model teams data per season, store it locally and create a DataFrame - TO DO
+Model drivers data per season, store it locally and create a DataFrame - TO DO
+Define metrics 
+
+
+
+df_race_results2['season'] = pd.to_numeric(df_race_results2['season'], errors = 'coerce')
+df_race_results2['round'] = pd.to_numeric(df_race_results2['round'], errors = 'coerce')
+df_race_results2['date'] = pd.to_datetime(df_race_results2['date']).dt.date
+df_race_results2['laps'] = pd.to_numeric(df_race_results2['laps'], errors = 'coerce')
+df_race_results2['starting_position'] = pd.to_numeric(df_race_results2['starting_position'], errors = 'coerce')
+df_race_results2['ending_position']  =pd.to_numeric(df_race_results2['ending_position'], errors = 'coerce')
+df_race_results2['points'] = pd.to_numeric(df_race_results2['points'], errors = 'coerce')
+df_race_results2['fastest_lap_time'] = pd.to_datetime(df_race_results2['fastest_lap_time'], format='%M:%S.%f').dt.time
+df_race_results2['fastest_lap_avg_speed'] = pd.to_numeric(df_race_results2['fastest_lap_avg_speed'], errors = 'coerce')
+df_race_results2['fastest_lap_rank'] = pd.to_numeric(df_race_results2['fastest_lap_rank'], errors = 'coerce')
+df_race_results2['fastest_lap_lap'] = pd.to_numeric(df_race_results2['fastest_lap_lap'], errors = 'coerce')
